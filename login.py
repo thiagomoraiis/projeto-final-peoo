@@ -1,7 +1,9 @@
 from tkinter import *
-from turtle import window_height
 from tkinter import messagebox
+from turtle import window_height
+
 from telaprincipal import PrimeiraTela
+
 
 class MasterFrame:
     def __init__(self, mestre):
@@ -11,7 +13,9 @@ class MasterFrame:
         self.frame1["padx"] = 100
         self.frame1["pady"] = 50
         self.frame1.pack()
-        self.titulo = Label(self.frame1, text="Banco", foreground="black", background="white")
+        self.titulo = Label(
+            self.frame1, text="Banco", foreground="black", background="white"
+        )
         self.titulo["font"] = ("Open Sans", "10", "bold")
         self.titulo.pack()
         self.frame2 = Frame(mestre)
@@ -28,7 +32,9 @@ class MasterFrame:
         self.input2.pack()
         self.frame4 = Frame(mestre)
         self.frame4.pack()
-        self.btn = Button(self.frame4, text="Entrar", foreground="black", background="white")
+        self.btn = Button(
+            self.frame4, text="Entrar", foreground="black", background="white"
+        )
         self.btn["command"] = self.autenticacao
         self.btn.pack()
         self.msg = Label(self.frame4, text="")
@@ -47,6 +53,7 @@ class MasterFrame:
         else:
             messagebox.showerror(title="Dados incorretos!", message="Digite Novamente!")
             self.root.withdraw()
+
 
 raiz = Tk()
 MasterFrame(raiz)

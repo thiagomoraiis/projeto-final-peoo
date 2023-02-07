@@ -52,31 +52,6 @@ class PrimeiraTela:
         self.btn_sair.pack()
         self.message1.pack()
 
-        # self.btn_deletar = Button(self.fram1, background="cyan", foreground="white")
-        # self.btn_deletar["text"] = "Remover todo o dinheiro"
-        # self.btn_deletar["command"] = self.deletar
-        # self.btn_deletar.pack()
-        # self.msg.pack()
-
-        # self.btn_editar = Button(self.fram1, background="cyan", foreground="white")
-        # self.btn_editar["text"] = "Atualizar o dinheiro"
-        # self.btn_editar["command"] = self.editar
-        # self.btn_editar.pack()
-        # self.msg.pack()
-
-        # self.btn_adicionar = Button(self.fram1, background="cyan", foreground="white")
-        # self.btn_adicionar["text"] = "Adicionar dinheiro a conta"
-        # self.btn_adicionar["command"] = self.add
-        # self.btn_adicionar.pack()
-        # self.msg.pack()
-
-        # self.btn_sair = Button(self.fram1, background="cyan", foreground="white")
-        # self.btn_sair["text"] = "Sair"
-        # self.btn_sair["command"] = self.logout
-        # self.btn_sair.pack()
-        # self.message2 = Label(self.fram1, text="")
-        # self.message2.pack()
-
     def listando(self, mestre=None):
         self.frame_listar = Toplevel()
         self.frame_listar.title("Janela de listagem")
@@ -100,7 +75,6 @@ class PrimeiraTela:
 
     def logout(self):
         self.fram1.destroy()
-        # self.fram1.destroy()
 
     def deletar(self):
         TerceiraTela()

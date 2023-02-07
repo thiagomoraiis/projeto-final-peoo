@@ -41,17 +41,17 @@ class MasterFrame:
         self.msg.pack()
 
     def autenticacao(self):
-        nameLog = self.input1.get()
-        passwordLog = self.input2.get()
-        if nameLog == "Tatiane" and passwordLog == "123":
-            self.msg["text"] = "SUCESSO!"
+        nomeUser = self.input1.get()
+        senhaUser = self.input2.get()
+        if nomeUser == "Lavínia" and senhaUser == "123":
+            self.msg["text"] = "LOGADO!"
             PrimeiraTela()
-        elif nameLog == "Tatiane":
-            messagebox.showerror(title="Erroo!", message="Senha do Usuario Incorreta!")
-        elif passwordLog == "123":
-            messagebox.showerror(title="Erroo!", message="Nome do usuario Incorreto!")
+        elif nomeUser == "Lavínia":
+            messagebox.showerror(title="Erro!", message="A senha está incorreta!")
+        elif senhaUser == "123":
+            messagebox.showerror(title="Erro!", message="O nome do usuario está incorreto!")
         else:
-            messagebox.showerror(title="Dados incorretos!", message="Digite Novamente!")
+            messagebox.showerror(title="Dados incorretos!", message="Informe Novamente!")
             self.root.withdraw()
 
 

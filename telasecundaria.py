@@ -8,14 +8,14 @@ class SegundaTela:
         self.fram2["pady"] = 70
         self.fram2["padx"] = 150
         self.fram2.pack()
-        self.label1 = Label(self.fram2, text="Adicionar um novo valor", background="white", foreground="black")
+        self.label1 = Label(self.fram2, text="Adicionar um novo valor", background="orange", foreground="black")
         self.label1["font"] = ("Open Sans", "12", "bold")
         self.label1.pack()
         self.labeu = Label(self.top, text="Adicionar um novo valor")
         self.labeu.pack(side=TOP)
         self.input3 = Entry(self.top, text="Confirmar adição", background="white", foreground="black")
         self.input3.pack(side=TOP)
-        self.button = Button(self.top, text="Adicionar", background="white", foreground="black")
+        self.button = Button(self.top, text="Adicionar", background="orange", foreground="black")
         self.button["command"] = self.adicionar
         self.button.pack()
         self.label3 = Label(self.top, text="")

@@ -8,7 +8,7 @@ class QuintaTela:
         self.fr["padx"] = 150
         self.fr["pady"] = 70
         self.fr.pack()
-        self.lab = Label(self.fr, text="Editar seu saldo", background='#0277db', foreground='white', )
+        self.lab = Label(self.fr, text="Editar seu saldo", background='orange', foreground='white', )
         self.lab["font"] = ("Arial", "10", "bold")
         self.lab.pack()
         self.fr = Label(self.top, text="Numero do deposito: ")

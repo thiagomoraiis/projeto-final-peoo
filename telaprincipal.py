@@ -21,7 +21,7 @@ class PrimeiraTela:
         self.message1.pack()
         self.message2.pack()
 
-        self.btn_listar = Button(self.fram1, background="cyan", foreground="white")
+        self.btn_listar = Button(self.fram1, background="orange", foreground="white")
         self.btn_listar["text"] = "Historico de depositos"
         self.btn_listar["command"] = self.listando
         self.btn_listar.pack()

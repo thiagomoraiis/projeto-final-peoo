@@ -12,8 +12,7 @@ class PrimeiraTela:
         self.fram1 = Toplevel()
         self.fram1.title("Janela 2")
         self.fram1["padx"] = 150
-        self.fram1["pady"] = 30
-        # self.fram1.pack()
+        self.fram1["pady"] = 70
 
         self.message1 = Label(
             self.fram1, text="O que deseja fazer?", background="red", foreground="white"
@@ -65,8 +64,8 @@ class PrimeiraTela:
         self.titulo1.pack()
         self.fram2 = Frame(self.frame_listar)
         self.fram2.pack()
-        arquivo = open("bd.txt", "r")
-        for arq in arquivo:
+        bd = open("bd.txt", "r")
+        for arq in bd:
             self.dados = Label(self.list, text=arq, foreground="#202024")
             self.dados.pack()
 

@@ -4,7 +4,7 @@ class TerceiraTela:
         self.top = Toplevel()
         self.top.title("deletar ")
         self.fmn = Frame(self.top)
-        self.fmn["pady"] = 50
+        self.fmn["pady"] = 70
         self.fmn["padx"] = 150
         self.fmn.pack()
         self.lab = Label(self.fmn, text="Remova")
@@ -20,20 +20,6 @@ class TerceiraTela:
         self.varMsg = Label(self.top, text="")
         self.varMsg.pack()
 
-    # def deletar(self):
-    #     nomes = []
-    #     f = open("bd.txt", "r")
-    #     for row in  f:
-    #         nomes.append(row)
-    #         # f.close()
-
-    #     pos = int(self.inp.get())
-    #     nomes.remove(nomes[pos])
-    #     f = open("bd.txt", "w")
-    #     for row in nomes:
-    #         f.white(row)
-    #     f.close
-
     def deletar(self):
         agend = []
         x = open("bd.txt", "r")
@@ -46,4 +32,6 @@ class TerceiraTela:
         for Linha in agend:
             x.write(Linha)
         x.close
+        self.top.destroy()
+
 

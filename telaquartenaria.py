@@ -1,42 +1,43 @@
 from tkinter import *
-from turtle import pos
+from turtle import color
 class QuintaTela:
     def __init__(self, mestre = None):
         self.top = Toplevel()
         self.top.title("Edição horarios")
-        self.fr5 = Frame(self.top)
-        self.fr5["padx"] = 100
-        self.fr5["pady"] = 100
-        self.fr5.pack()
-        self.ti = Label(self.fr5, text="Editar seu horario", background='#0277db', foreground='white', )
-        self.ti["font"] = ("Arial", "10", "bold")
-        self.ti.pack()
-        self.fr5 = Label(self.top, text=" Posição do agendamento: ")
-        self.fr5.pack(side=LEFT)
-        self.C3 = Entry(self.top, background='white')
-        self.C3.pack(side=LEFT)
-        self.fr5 = Label(self.top, text=" Mudar o horario do agendamento:")
-        self.fr5.pack(side=LEFT)
-        self.C2 = Entry(self.top, background='white')
-        self.C2.pack(side=LEFT)
-        self.fr5 = Button(self.top, text='Confirmar horario',
+        self.fr = Frame(self.top)
+        self.fr["padx"] = 150
+        self.fr["pady"] = 70
+        self.fr.pack()
+        self.lab = Label(self.fr, text="Editar seu horario", background='#0277db', foreground='white', )
+        self.lab["font"] = ("Arial", "10", "bold")
+        self.lab.pack()
+        self.fr = Label(self.top, text=" Posição do agendamento: ")
+        self.fr.pack(side=LEFT)
+        self.inpu1 = Entry(self.top, background='white')
+        self.inpu1.pack(side=LEFT)
+        self.fr = Label(self.top, text=" Mudar o horario do agendamento:")
+        self.fr.pack(side=LEFT)
+        self.inpu2 = Entry(self.top, background='white')
+        self.inpu2.pack(side=LEFT)
+        self.fr = Button(self.top, text='Confirmar horario',
         background='#00FF00')
-        self.fr5["command"] = self.editar
-        self.fr5.pack()
-        self.ti = Label(self.top, text="")
-        self.ti.pack()
+        self.fr["command"] = self.editar
+        self.fr.pack()
+        self.lab = Label(self.top, text="")
+        self.lab.pack()
 
     def editar(self):
-        nomes = []
+        dindin = []
         f = open("bd.txt", "r")
         for linha in f:
-            nomes.append(linha)
+            dindin.append(linha)
             f.close
-        pos = int(self.C3.get())
-        novo = self.C2.get()
-        nomes[pos] = novo
+        pos = int(self.inpu1.get())
+        novo = self.inpu2.get()
+        dindin[pos] = novo
         f = open("bd.txt", "w")
-        for linha in nomes:
+        for linha in dindin:
             f.write(linha)
             f.write("\n")
         f.close
+        self.top.destroy()

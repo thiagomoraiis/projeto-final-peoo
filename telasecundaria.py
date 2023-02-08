@@ -5,7 +5,7 @@ class SegundaTela:
         self.top = Toplevel()
         self.top.title("Janela 2")
         self.fram2 = Frame(self.top)
-        self.fram2["pady"] = 50
+        self.fram2["pady"] = 70
         self.fram2["padx"] = 150
         self.fram2.pack()
         self.label1 = Label(self.fram2, text="Adicione um novo valor", background="white", foreground="black")
@@ -26,4 +26,5 @@ class SegundaTela:
         var2 = self.input3.get()
         var1.write(var2)
         var1.write('\n')
+        self.top.destroy()
 

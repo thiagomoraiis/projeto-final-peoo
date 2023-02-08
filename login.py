@@ -52,10 +52,10 @@ class MasterFrame:
         if nomeUser == "Lavinia" and senhaUser == "12345":
             self.msg["text"] = "LOGADO!"
             PrimeiraTela()
-        elif nomeUser == "Lavinia":
-            messagebox.showerror(title="Erro!", message="A senha está incorreta!")
-        elif senhaUser == "12345":
+        elif nomeUser != "Lavinia":
             messagebox.showerror(title="Erro!", message="O nome do usuario está incorreto!")
+        elif senhaUser != "12345":
+            messagebox.showerror(title="Erro!", message="A senha está incorreta!")
         else:
             messagebox.showerror(title="Dados incorretos!", message="Informe Novamente!")
             self.root.withdraw()

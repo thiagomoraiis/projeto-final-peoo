@@ -13,7 +13,8 @@ class MasterFrame:
         self.frame1["pady"] = 70
         self.frame1.pack()
         self.titulo = Label(
-            self.frame1, text="Banco", foreground="white", background="orange"
+            self.frame1, text="Banco", 
+            foreground="white", background="orange"
         )
         self.titulo["font"] = ("Arial", "10", "bold")
         self.titulo.pack()

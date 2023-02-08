@@ -21,12 +21,12 @@ class QuintaTela:
         self.inpu2.pack(side=LEFT)
         self.fr = Button(self.top, text='Confirmar',
         background='#00FF00') #inicialização do botao que vai realizar as ações do usuario
-        self.fr["command"] = self.editar #o comando iria receber o botão e, ao clicar, o botão executara o comando da função editar
+        self.fr["command"] = self.edit #o comando iria receber o botão e, ao clicar, o botão executara o comando da função edit
         self.fr.pack() #
         self.lab = Label(self.top, text="")
         self.lab.pack()
 
-    def editar(self):
+    def edit(self):
         dindin = [] #criação de lista
         f = open("bd.txt", "r") #variavel que ira abrir o arquivo e ler ele
         for linha in f: #laço de repetição que ira percorrer as linha do arquivo
@@ -38,7 +38,7 @@ class QuintaTela:
         dindin[pos] = novo #o indice da lista ira receber o novo valor que o usuario modificar
         f = open("bd.txt", "w") #variavel ira novamente abrir o arquivo e reescrever o que esta no indice que foi fornecido pelo usuario, editando-o
         for linha in dindin: #laço de repetição que ira percorrer a lista 
-            f.write(str(linha)) # write ira, de fato, sobrescrever o que o usuario quiser editar 
+            f.write(str(linha)) # write ira, de fato, sobrescrever o que o usuario quiser edit 
             f.write("\n") #quebrar linha
         f.close 
         self.top.destroy() #ao clicar no botão, ele ira destruir o frame, voltando para a tela inicial

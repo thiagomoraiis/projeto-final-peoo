@@ -23,29 +23,29 @@ class PrimeiraTela:
 
         self.btn_listar = Button(self.fram1, background="orange", foreground="white") #botão que executara o listamento dos depositos
         self.btn_listar["text"] = "Historico de depositos"
-        self.btn_listar["command"] = self.listando # botão receberar a função de listar
+        self.btn_listar["command"] = self.listando # botão receberar a função de detalhar
         self.btn_listar.pack()
         self.message1.pack()
 
-        self.btn_editar = Button(self.fram1, background="cyan", foreground="white") #botão que executara a edição
+        self.btn_editar = Button(self.fram1, background="orange", foreground="white") #botão que executara a edição
         self.btn_editar["text"] = "Editar Saldo atual"
-        self.btn_editar["command"] = self.editar # botão receberar a função de editar
+        self.btn_editar["command"] = self.edit # botão receberar a função de edit
         self.btn_editar.pack()
         self.message1.pack()
 
-        self.btn_deletar = Button(self.fram1, background="cyan", foreground="white") #botão que executara o listamento dos depositos
+        self.btn_deletar = Button(self.fram1, background="orange", foreground="white") #botão que executara o listamento dos depositos
         self.btn_deletar["text"] = "Cancelar deposito"
         self.btn_deletar["command"] = self.deletar #botão recebera a função de deletar itens
         self.btn_deletar.pack()
         self.message1.pack()
 
-        self.btn_listar = Button(self.fram1, background="cyan", foreground="white") #botão executara a adição dos depositos
+        self.btn_listar = Button(self.fram1, background="orange", foreground="white") #botão executara a adição dos depositos
         self.btn_listar["text"] = "Fazer novo deposito"
         self.btn_listar["command"] = self.add #botão executara a adição de depositos
         self.btn_listar.pack()
         self.message1.pack()
 
-        self.btn_sair = Button(self.fram1, background="cyan", foreground="white")
+        self.btn_sair = Button(self.fram1, background="red", foreground="white")
         self.btn_sair["text"] = "Sair"
         self.btn_sair["command"] = self.logout #função que executar a desconexão do usuario na pagina
         self.btn_sair.pack()
@@ -69,7 +69,7 @@ class PrimeiraTela:
             self.dados = Label(self.list, text=arq, foreground="#202024")
             self.dados.pack()
 
-    def listar(self):
+    def detalhar(self):
         PrimeiraTela()
 
     def logout(self):
@@ -81,5 +81,5 @@ class PrimeiraTela:
     def add(self):
         SegundaTela()
 
-    def editar(self):
+    def edit(self):
         QuintaTela()

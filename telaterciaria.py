@@ -21,16 +21,16 @@ class TerceiraTela:
         self.varMsg.pack()
 
     def deletar(self):
-        dep = []
-        x = open("bd.txt", "r")
-        for Linha in x:
-            dep.append(Linha)
-            x.close
-        position = int(self.inp.get())
-        dep.remove(dep[position])
-        x = open("bd.txt", "w")
-        for Linha in dep:
-            x.write(Linha)
+        dep = [] # lista chamada dep
+        x = open("bd.txt", "r") #variavel x ira abrir o arquivo de lê
+        for Linha in x: # laço de repetição ira percorrer as linhas do arquivo
+            dep.append(Linha) #a função append vai adicioanr os dados da variavel na lista
+            x.close #fecha o arquivo
+        position = int(self.inp.get()) #variavel ira receber a entrada do usuario e converter para inteiro
+        dep.remove(dep[position]) # a função remove ira remover o item com base no indice 
+        x = open("bd.txt", "w") # variavel abre o arquivo
+        for Linha in dep: # laço de repetição ira percorrer o arquivo novamnete
+            x.write(Linha) #e ira escrever a alteração
         x.close
         self.top.destroy()
 

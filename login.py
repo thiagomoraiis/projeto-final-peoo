@@ -39,7 +39,7 @@ class MasterFrame:
         self.btn = Button(
             self.frame4, text="Entrar", foreground="white", background="orange"
         )
-        self.btn["command"] = self.autenticar
+        self.btn["command"] = self.autenticar #comando do botão ira receber a função de autenticar
         self.btn.pack()
         self.msg = Label(
             self.frame4, text=""
